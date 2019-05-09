@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,93 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SecondKadaiApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GUT-5h-ahL">
+                                <rect key="frame" x="50" y="231" width="275" height="30"/>
+                                <state key="normal" title="次へ"/>
+                                <connections>
+                                    <segue destination="RmO-qh-H3X" kind="show" id="315-Zv-E5k"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ここに名前を入力してください" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jgx-jV-a6S">
+                                <rect key="frame" x="50" y="151" width="275" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名前を入力してください" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jmL-Go-GMu">
+                                <rect key="frame" x="50" y="120" width="275" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jmL-Go-GMu" secondAttribute="trailing" constant="50" id="3dO-bF-Mop"/>
+                            <constraint firstItem="Jgx-jV-a6S" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="8GX-8x-3h3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jgx-jV-a6S" secondAttribute="trailing" constant="50" id="ChQ-3u-RDY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GUT-5h-ahL" secondAttribute="trailing" constant="50" id="MhF-7t-mWu"/>
+                            <constraint firstItem="Jgx-jV-a6S" firstAttribute="top" secondItem="jmL-Go-GMu" secondAttribute="bottom" constant="10" id="jbk-yq-lNS"/>
+                            <constraint firstItem="jmL-Go-GMu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="qEQ-bz-Qgc"/>
+                            <constraint firstItem="jmL-Go-GMu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="rkc-ZI-HhD"/>
+                            <constraint firstItem="GUT-5h-ahL" firstAttribute="top" secondItem="Jgx-jV-a6S" secondAttribute="bottom" constant="50" id="vU3-Oh-XsG"/>
+                            <constraint firstItem="GUT-5h-ahL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="yPn-Ua-Otb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="namae" destination="Jgx-jV-a6S" id="2rf-AJ-qlx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="125.59999999999999" y="133.5832083958021"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="AE0-cZ-W2h">
+            <objects>
+                <viewController id="RmO-qh-H3X" customClass="ResultViewController" customModule="SecondKadaiApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tU4-hh-SE8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="こんにちは＿さん" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIO-2A-9c6">
+                                <rect key="frame" x="50" y="120" width="275" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kw5-hC-TLC">
+                                <rect key="frame" x="50" y="232" width="275" height="30"/>
+                                <state key="normal" title="戻る"/>
+                                <connections>
+                                    <segue destination="sgp-kt-KKo" kind="unwind" unwindAction="unwind:" id="Mbt-Sd-TP2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nIO-2A-9c6" firstAttribute="top" secondItem="VHj-dU-ehh" secondAttribute="top" constant="100" id="7lj-8q-dAl"/>
+                            <constraint firstItem="VHj-dU-ehh" firstAttribute="trailing" secondItem="Kw5-hC-TLC" secondAttribute="trailing" constant="50" id="TCd-F6-mYX"/>
+                            <constraint firstItem="Kw5-hC-TLC" firstAttribute="leading" secondItem="VHj-dU-ehh" secondAttribute="leading" constant="50" id="UHH-d5-UKo"/>
+                            <constraint firstItem="nIO-2A-9c6" firstAttribute="leading" secondItem="VHj-dU-ehh" secondAttribute="leading" constant="50" id="jMY-Gj-geM"/>
+                            <constraint firstItem="VHj-dU-ehh" firstAttribute="trailing" secondItem="nIO-2A-9c6" secondAttribute="trailing" constant="50" id="rPh-Cc-tip"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VHj-dU-ehh"/>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="nIO-2A-9c6" id="po1-8A-w1N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8jR-Yi-8w9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="sgp-kt-KKo" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="768.79999999999995" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>
