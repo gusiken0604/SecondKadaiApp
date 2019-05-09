@@ -74,8 +74,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kw5-hC-TLC">
-                                <rect key="frame" x="50" y="232" width="275" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kw5-hC-TLC">
+                                <rect key="frame" x="50" y="151" width="275" height="30"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
                                     <segue destination="sgp-kt-KKo" kind="unwind" unwindAction="unwind:" id="Mbt-Sd-TP2"/>
@@ -87,6 +87,7 @@
                             <constraint firstItem="nIO-2A-9c6" firstAttribute="top" secondItem="VHj-dU-ehh" secondAttribute="top" constant="100" id="7lj-8q-dAl"/>
                             <constraint firstItem="VHj-dU-ehh" firstAttribute="trailing" secondItem="Kw5-hC-TLC" secondAttribute="trailing" constant="50" id="TCd-F6-mYX"/>
                             <constraint firstItem="Kw5-hC-TLC" firstAttribute="leading" secondItem="VHj-dU-ehh" secondAttribute="leading" constant="50" id="UHH-d5-UKo"/>
+                            <constraint firstItem="Kw5-hC-TLC" firstAttribute="top" secondItem="nIO-2A-9c6" secondAttribute="bottom" constant="10" id="fs9-RC-oBJ"/>
                             <constraint firstItem="nIO-2A-9c6" firstAttribute="leading" secondItem="VHj-dU-ehh" secondAttribute="leading" constant="50" id="jMY-Gj-geM"/>
                             <constraint firstItem="VHj-dU-ehh" firstAttribute="trailing" secondItem="nIO-2A-9c6" secondAttribute="trailing" constant="50" id="rPh-Cc-tip"/>
                         </constraints>
